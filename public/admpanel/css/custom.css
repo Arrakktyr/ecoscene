@@ -1,0 +1,10 @@
+/* Add here all your CSS customizations */
+.thumb-info form{
+    position:absolute;
+    top: 5px;
+    text-align: right;
+    right: 5px;
+}
+.thumb-info form label{
+    cursor:pointer;
+}
