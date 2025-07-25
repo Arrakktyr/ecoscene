@@ -48,7 +48,7 @@
                 <img src="/admpanel/img/logo.png" alt="Logo" style="width: 150px;">
             </a>
             <div>
-            <form action="http://127.0.0.1:8000/search" class="search nav-form" style="
+            <form action="/search" class="search nav-form" style="
     width: 300px;
 ">
                 <div class="input-group">
