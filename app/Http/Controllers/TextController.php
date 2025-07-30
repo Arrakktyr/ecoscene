@@ -18,7 +18,9 @@ class TextController extends Controller
 
     // 3. Подготавливаем путь к python и скрипту
     // Замените python3 на абсолютный путь к python, если нужно
-    $pythonPath = base_path('venv/Scripts/python.exe'); // для Windows, иначе 'python3' для Linux/Mac
+    //$pythonPath = base_path('venv/Scripts/python.exe'); // для Windows, иначе 'python3' для Linux/Mac
+    $pythonPath = base_path('/usr/bin/python3'); //под linux
+    
     $scriptPath = base_path('scripts/text_analyzer.py');
 
     // 4. Формируем команду, экранируем аргументы
@@ -79,7 +81,8 @@ class TextController extends Controller
         $escapedQuery = escapeshellarg($query);
 
         // Полный путь до python.exe в виртуальном окружении
-        $python = base_path('venv/Scripts/python.exe');
+        //$python = base_path('venv/Scripts/python.exe');
+        $pythonPath = base_path('/usr/bin/python3'); //под linux
 
         // Полный путь до скрипта
         $script = base_path('scripts/match_query.py');
