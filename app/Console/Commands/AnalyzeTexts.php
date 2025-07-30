@@ -22,7 +22,7 @@ class AnalyzeTexts extends Command
         file_put_contents($file, $texts->toJson());
 
         //$pythonPath = base_path('venv/Scripts/python.exe'); // под Windows, под Linux можно 'python3'
-        $pythonPath = '/usr/bin/python3'; //под linux
+        $pythonPath = base_path('venv/bin/python'); //под linux
         $scriptPath = base_path('scripts/text_analyzer.py');
 
         $cmd = escapeshellcmd("$pythonPath $scriptPath \"$file\"");
