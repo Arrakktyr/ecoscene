@@ -82,7 +82,7 @@ class TextController extends Controller
 
         // Полный путь до python.exe в виртуальном окружении
         //$python = base_path('venv/Scripts/python.exe');
-        $pythonPath = base_path('/usr/bin/python3'); //под linux
+        $python = base_path('/usr/bin/python3'); //под linux
 
         // Полный путь до скрипта
         $script = base_path('scripts/match_query.py');
