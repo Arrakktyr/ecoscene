@@ -21,7 +21,8 @@ class AnalyzeTexts extends Command
         $file = storage_path('app/text_analyzer.json');
         file_put_contents($file, $texts->toJson());
 
-        $pythonPath = base_path('venv/Scripts/python.exe'); // под Windows, под Linux можно 'python3'
+        //$pythonPath = base_path('venv/Scripts/python.exe'); // под Windows, под Linux можно 'python3'
+        $pythonPath = base_path('/usr/bin/python3'); //под linux
         $scriptPath = base_path('scripts/text_analyzer.py');
 
         $cmd = escapeshellcmd("$pythonPath $scriptPath \"$file\"");
